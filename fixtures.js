@@ -46,15 +46,10 @@ export const test = base.test.extend({
     //NOT USABLE FOR WIKIPEDIA, THIS IS JUST AN EXAMPLE
     login: async ({ page, isMobile }, use) => {
         await page.goto('/')
-        await page.waitForTimeout(2000)
         await accountPage.accButton.click()
         await accountPage.emailInput.fill(process.env.EMAIL)
         await accountPage.loginPasswordInput.fill(process.env.PASSWORD)
-        if (isMobile) {
-            await page.waitForTimeout(4000)
-        }
         await accountPage.logInButton.click()
-        await page.waitForTimeout(4000)
         await use(page)
     }
 })
