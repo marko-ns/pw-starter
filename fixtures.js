@@ -43,7 +43,7 @@ export const test = base.test.extend({
         await page.waitForTimeout(2000)
     },
     //an example of a login fixture, it makes it so that the user is logged in before the test starts
-    //NOT USABLE FOR WIKIPEDIA, THIS IS JUST AN EXAMPLE USING LITTLEFARMS
+    //NOT USABLE FOR WIKIPEDIA, THIS IS JUST AN EXAMPLE
     login: async ({ page, isMobile }, use) => {
         await page.goto('/')
         await page.waitForTimeout(2000)
